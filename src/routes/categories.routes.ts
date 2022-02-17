@@ -1,5 +1,5 @@
 import { response, Router } from "express";
-import multer, { Multer } from "multer";
+import multer from "multer";
 import { createCategoryController } from "../modules/cars/useCase/createCategory";
 import { listCategoriesController } from "../modules/cars/useCase/listCategory";
 
