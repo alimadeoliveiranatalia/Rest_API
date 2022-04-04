@@ -28,5 +28,9 @@ class UsersRepository implements IUsersRepository {
         const findEmail = await this.repository.findOne({email});
         return findEmail;
     }
+    async findById(id: string): Promise<User> {
+        const findId = await this.repository.findOne(id);
+        return findId;
+    }
 }
 export { UsersRepository }
