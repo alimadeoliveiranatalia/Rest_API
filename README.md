@@ -1,3 +1,4 @@
+![car-rental](/tmp/car-rental.png)
 <h2>API Rest para aluguel de veiculos</h2>
 <br>
 <ul>
