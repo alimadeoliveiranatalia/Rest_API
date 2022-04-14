@@ -1,8 +1,18 @@
-<div text-align = "center">
+<div display = flex justtify-content = "center">
     <img src ="/tmp/car-rental.png" width= "150px">
 </div>
 <h2>API Rest para aluguel de veiculos</h2>
 <br>
+<h4>Principais Tecnologias Utilizadas</h4>
+<ul>
+    <li>Node.js</li>
+    <li>Express</li>
+    <li>TypeScript</li>
+    <li>Docker</li>
+    <li>Postgres</li>
+    <li>TypeORM</li>
+    <li>JWT(Json Web Token)</li>
+</ul>
 <ul>
     <li>[ RF ] = Requisito Funcional </li>
     <li>[ RNF ] = Requisito Não Funcional</li>
