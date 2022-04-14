@@ -13,6 +13,7 @@
     <li>TypeORM</li>
     <li>JWT(Json Web Token)</li>
 </ul>
+<h4>Siglas desta Documentação</h4>
 <ul>
     <li>[ RF ] = Requisito Funcional </li>
     <li>[ RNF ] = Requisito Não Funcional</li>
@@ -49,8 +50,8 @@
 <h4>Cadastro de Especificações</h4>
 <ul>
     <li>[ RF ] Deve ser possível cadastrar uma especificação para um carro.</li>
-    <li>[ RF ] Deve ser possível listar todas as especificacoes.</li>
-    <li>[ RF ] Deve ser possível listar todas as especificacoes.</li>
+    <li>[ RF ] Deve ser possível listar todas as especificaçõoes.</li>
+    <li>[ RF ] Deve ser possível listar todas as especificaçõoes.</li>
     <li>[ RN ] Não deve ser possível cadastrar uma especificação para um carro não cadastrado.</li>
     <li>[ RN ] Não deve ser possível cadastrar uma especificação já existente para um mesmo carro.</li>
     <li>[ RN ] Não deve ser possível cadastrar uma especificação sem que o usuário seja um administrador.</li>
