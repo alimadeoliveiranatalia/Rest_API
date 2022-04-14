@@ -1,4 +1,6 @@
-![car-rental](/tmp/car-rental.png)
+<div text-align = "center">
+    <img src ="/tmp/car-rental.png" width= "150px">
+</div>
 <h2>API Rest para aluguel de veiculos</h2>
 <br>
 <ul>
