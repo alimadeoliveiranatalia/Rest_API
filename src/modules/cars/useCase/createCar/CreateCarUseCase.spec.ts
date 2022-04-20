@@ -54,6 +54,7 @@ describe("Create Car", () => {
             brand: "Brand",
             category_id:"category"
         });
+        
         expect(car.available).toBe(true);
     });
 });
