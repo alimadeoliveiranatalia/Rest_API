@@ -1,7 +1,7 @@
 import { CreateCarController } from "@modules/cars/useCase/createCar/CreateCarController";
 import { Router } from "express";
 import uploadConfig from "@config/upload";
-import { ensureAuthenticated } from "@shared/infra/http/middlewares/enchureAuthenticated";
+import { ensureAuthenticated } from "@shared/infra/http/middlewares/ensureAuthenticated";
 import { ensureAdmin } from "@shared/infra/http/middlewares/ensureAdmin";
 import { ListAvailableCarsController } from "@modules/cars/useCase/listAvailableCars/ListAvailableCarsController";
 import { CreateCarSpecificationController } from "@modules/cars/useCase/createCarSpecification/CreateCarSpecificationController";

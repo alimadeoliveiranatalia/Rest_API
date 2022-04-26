@@ -3,7 +3,7 @@ import multer from "multer";
 import { CreateCategoryController } from "@modules/cars/useCase/createCategory/CreateCategoryController";
 import { ImportCategoryController } from "@modules/cars/useCase/importCategory/ImportCategoryController";
 import { ListCategoriesController } from "@modules/cars/useCase/listCategory/ListCategoriesController";
-import { ensureAuthenticated } from "@shared/infra/http/middlewares/enchureAuthenticated";
+import { ensureAuthenticated } from "@shared/infra/http/middlewares/ensureAuthenticated";
 import { ensureAdmin } from "@shared/infra/http/middlewares/ensureAdmin";
 
 const categoriesRoutes = Router();
