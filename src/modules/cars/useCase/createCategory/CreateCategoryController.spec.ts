@@ -2,7 +2,8 @@ import { app } from "@shared/infra/http/app";
 import { v4 as uuidv4 } from "uuid";
 import { hash } from "bcrypt";
 import request from "supertest";
-import { Connection, createConnection } from "typeorm";
+import { Connection } from "typeorm";
+import createConnection from "@shared/infra/typeorm";
 
 let connection : Connection;
 
@@ -20,7 +21,7 @@ describe("Create Category Controller", () => {
         await connection.query(
             `INSERT INTO USERS(id,name,email,password,"isAdmin",created_at,driver_license)
             VALUES('${id}','admin','admin@aluguel.com','${password}','true','now()','JHT-0876')`
-        )
+        );
     });
     afterAll(async () => {
         await connection.dropDatabase();

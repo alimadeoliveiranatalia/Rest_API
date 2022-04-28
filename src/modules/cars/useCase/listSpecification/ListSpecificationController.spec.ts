@@ -1,19 +1,19 @@
 import { v4 as uuidv4 } from "uuid";
-import { Connection} from "typeorm";
+import { Connection  } from "typeorm";
 import createConnection from "@shared/infra/typeorm";
 import request from "supertest";
 import { hash } from "bcrypt";
 import { app } from "@shared/infra/http/app";
 
 let connection: Connection;
-describe("List Categories", () => {
 
+describe("List Specifications", () => {
     beforeAll(async () => {
         connection = await createConnection();
 
         await connection.runMigrations();
 
-        const id =  uuidv4();
+        const id = uuidv4();
 
         const password = await hash("admin", 8);
 
@@ -26,7 +26,7 @@ describe("List Categories", () => {
         await connection.dropDatabase();
         await connection.close();
     });
-    it("Should be able to list all categories", async () => {
+    it("Should be able list all specifications", async () => {
         const responseToken = await request(app).post("/sessions").send({
             email:"admin@aluguel.com",
             password:"admin"
@@ -34,17 +34,17 @@ describe("List Categories", () => {
         const { token } = responseToken.body;
 
         await request(app)
-        .post("/categories")
+        .post("/specifications")
         .send({
-            name:"Category Supertest",
-            description: "Description Category Supertest"
+            name:"Specification Supertest",
+            description:"Description Specification"
         }).set({
-            Authorization: `Bearer ${ token }`
+            Authorization:`Bearer ${ token }`
         });
-        const response = await request(app).get("/categories");
+        const response = await request(app).get("/specifications");
         expect(response.status).toBe(200);
         expect(response.body.length).toBe(1);
         expect(response.body[0]).toHaveProperty("id");
-        expect(response.body[0].name).toEqual("Category Supertest");
+        expect(response.body[0].name).toEqual("Specification Supertest");
     });
 });
