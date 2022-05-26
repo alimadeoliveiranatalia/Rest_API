@@ -63,6 +63,7 @@
     <li>[ RN ] O alugel deve ter duração mínima de 24 horas.</li>
     <li>[ RN ] Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo usuário.</li>
     <li>[ RN ] Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo carro.</li>
+    <li>[ RN ] Ao realizar um aluguel, o carro deve está indisponível para outro aluguel.</li>
 </ul>
 <h6>Devolução de um Carro</h6>
 <ul>
