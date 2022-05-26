@@ -3,9 +3,11 @@
 </div>
 <h2>API Rest para aluguel de veiculos</h2>
 <br>
-<h4>Principais Tecnologias Utilizadas</h4>
+<h6>Principais Tecnologias Utilizadas</h6>
 <ul>
     <li>Node.js</li>
+    <li>SOLID</li>
+    <li>Testes de Unidades e Integração</li>
     <li>Express</li>
     <li>TypeScript</li>
     <li>Docker</li>
@@ -73,4 +75,5 @@
     <li>Ao realizar a devolução, deverá ser calculado o total do aluguel.</li>
     <li>Caso o horário da devolução seja superior ao horário previsto pela entrega, deve ser cobrado uma multa proporcional aos dias de atraso.</li>
     <li>Caso ocorra a cobraça de multa, deve ser cobrado junto com o valor do aluguel estipulado.</li>
+    <li>O usuário deve está logado na aplicação.</li>
 </ul>
