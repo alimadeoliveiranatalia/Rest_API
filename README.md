@@ -77,3 +77,9 @@
     <li>Caso ocorra a cobraça de multa, deve ser cobrado junto com o valor do aluguel estipulado.</li>
     <li>O usuário deve está logado na aplicação.</li>
 </ul>
+<br>
+<h6>Listagem de aluguel para Usuário</h6>
+<ul>
+    <li>Deve ser possível realizar a busca de todos os aluguéis para o usuário.</li>
+    <li>O usuário deve estar logado na aplicação.</li>
+</ul>
