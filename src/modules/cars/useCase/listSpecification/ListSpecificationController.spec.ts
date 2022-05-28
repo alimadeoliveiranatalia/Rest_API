@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from "uuid";
+import { v4 as uuid } from "uuid";
 import { Connection  } from "typeorm";
 import createConnection from "@shared/infra/typeorm";
 import request from "supertest";
@@ -13,7 +13,7 @@ describe("List Specifications", () => {
 
         await connection.runMigrations();
 
-        const id = uuidv4();
+        const id = uuid();
 
         const password = await hash("admin", 8);
 
