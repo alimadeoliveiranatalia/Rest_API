@@ -5,6 +5,7 @@ import { specificationsRoutes } from '@shared/infra/http/routes/specifications.r
 import { usersRoutes } from "@shared/infra/http/routes/users.routes";
 import { carsRoutes } from "./cars.routes";
 import { rentalsRoutes } from "./rentals.routes";
+import { passwordRoutes } from "./password.routes";
 
 const router = Router();
 
@@ -17,6 +18,8 @@ router.use("/users", usersRoutes);
 router.use("/cars", carsRoutes);
 
 router.use("/rentals", rentalsRoutes);
+
+router.use("/password", passwordRoutes);
 
 router.use(authenticateRoutes);
 
