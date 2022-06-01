@@ -83,3 +83,12 @@
     <li>Deve ser possível realizar a busca de todos os aluguéis para o usuário.</li>
     <li>O usuário deve estar logado na aplicação.</li>
 </ul>
+<br>
+<h6>Recuperação de Senha </h6>
+<ul>
+    <li>Deve ser possível recuperar a senha informando o e-mail.</li>
+    <li>O usuário deve receber um e-mail com um passo a passo para a recuperação sa senha.</li>
+    <li>O usuário deve conseguir inserir uma nova senha.</li>
+    <li>O usuário precisa informar uma nova senha.</li>
+    <li>O link enviado para a recuperação deve expirar em 3 horas.</li>
+</ul>
