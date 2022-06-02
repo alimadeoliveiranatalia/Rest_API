@@ -7,10 +7,11 @@ import handlebars from "handlebars";
 @injectable()
 class EtherealMailProvider implements IMailProvider {
     private client: Transporter;
+    private async createClient(){
+        try {
+            const account = await nodemailer.createTestAccount();
 
-    constructor(){
-        nodemailer.createTestAccount().then(account => {
-            const transporter = nodemailer.createTransport({
+            this.client = nodemailer.createTransport({
                 host: account.smtp.host,
                 port: account.smtp.port,
                 secure: account.smtp.secure,
@@ -19,8 +20,14 @@ class EtherealMailProvider implements IMailProvider {
                     pass: account.pass
                 }
             });
-            this.client = transporter;
-        }).catch((err) => console.error(err));
+        } catch (error) {
+            console.error(`EtherealMailProvider - Error:\n${error}`);
+        }
+    }
+
+    constructor(){
+        
+        this.client;
     }
     async sendMail(
         to: string,
@@ -28,6 +35,9 @@ class EtherealMailProvider implements IMailProvider {
         variables: any,
         path: string
         ): Promise<void> {
+            if(!this.client) {
+                await this.createClient();
+            }
         const templateFileContent = fs.readFileSync(path).toString("utf-8");
 
         const templateParse = handlebars.compile(templateFileContent);
