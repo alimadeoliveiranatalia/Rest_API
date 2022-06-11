@@ -1,4 +1,3 @@
-import "dotenv/config";
 export default {
     "type": "postgres",
     "port": process.env.port,
